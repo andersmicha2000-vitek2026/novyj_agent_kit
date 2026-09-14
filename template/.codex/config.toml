@@ -1,0 +1,10 @@
+# Замок безопасности для Codex CLI — аналог .claude/settings.json.
+# Грубее, чем deny-список Claude Code (нет точечного "не трогать .env"),
+# зато режет две вещи по умолчанию: сеть и работу вне рабочей папки.
+# Подробнее: https://developers.openai.com/codex/config-advanced
+
+approval_policy = "on-request"   # спрашивать перед тем, что не входит в безопасный набор
+sandbox_mode = "workspace-write" # писать можно только внутри папки агента
+
+[sandbox_workspace_write]
+network_access = false           # сеть выключена, пока не понадобится конкретному агенту
