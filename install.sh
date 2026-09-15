@@ -61,7 +61,7 @@ if command -v graphify >/dev/null 2>&1; then
     # graphify дописывает секцию "## graphify" в CLAUDE.md — у нас CLAUDE.md
     # это только указатель на AGENTS.md, сама секция уже отдельно легла в
     # AGENTS.md той же командой — возвращаем CLAUDE.md к одной строке.
-    printf 'AGENTS.md\n' > CLAUDE.md
+    printf '@AGENTS.md\n' > CLAUDE.md
   )
   echo "graphify подключён (Claude Code + Codex) — граф строится по команде"
   echo "\`graphify .\` / \`/graphify .\`, когда в папке появится что реально мапить."
